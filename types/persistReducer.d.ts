@@ -12,7 +12,7 @@ declare module "redux-persist/es/persistReducer" {
    * @param baseReducer reducer used to persist the state
    */
   // tslint:disable-next-line: strict-export-declare-modifiers
-  export default function persistReducer<S, A extends Action = Action>(config: PersistConfig<S>, baseReducer: Reducer<S, A>): Reducer<S & PersistPartial, A>;
+  export default function persistReducer<S>(config: PersistConfig<S>, baseReducer: Reducer<S>): Reducer<S & PersistPartial>;
 }
 
 declare module "redux-persist/lib/persistReducer" {
